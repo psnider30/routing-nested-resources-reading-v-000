@@ -1,0 +1,7 @@
+<%= content_tag(:h1, @author.name) %>
+
+<%= content_tag(:ul) do %>
+  <% @posts.each do |post| %>
+    <%= content_tag(:li, link_to(post.title, author_post_path(@author, post))) %>
+  <% end %>
+<% end %>
